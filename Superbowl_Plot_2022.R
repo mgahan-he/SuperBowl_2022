@@ -14,6 +14,7 @@ all_files[, Company := basename(dirname(V4))]
 all_files <- all_files[!(Company == "coin_toss" & Time >= as.POSIXct("2022-02-13 18:12:21", tz="America/Los_Angeles"))]
 all_files1 <- all_files[Time < as.POSIXct("2022-02-13 21:30:00", tz="America/Los_Angeles")]
 setorder(all_files1, Company, -Time)
+all_files1 <- all_files1[!(Company %in% "amc_plus")]
 all_files1 <- all_files1[, .SD[1L], by=.(Company)]
 all_files2 <- all_files[Time < as.POSIXct("2022-02-13 21:30:00", tz="America/Los_Angeles")]
 setorder(all_files2, Company, -Time)

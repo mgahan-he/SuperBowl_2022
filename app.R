@@ -29,7 +29,7 @@ ui <- fluidPage(
   # Create a new Row in the UI for selectInputs
   fluidRow(
     column(4,
-        selectInput("keyword_par","Google Keyword:",keywords, "the weeknd")
+        selectInput("keyword_par","Google Keyword:",keywords, "dr dre")
     )
   ),
 	
